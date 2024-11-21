@@ -5,6 +5,7 @@ class Caregiver:
         self.email = email
         self.pay_rate = pay_rate
         self.availability = availability if availability else self.initialize_availability()
+        self.hours_worked = 0
 
     def initialize_availability(self):
         days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ]
@@ -22,6 +23,15 @@ class Caregiver:
 
     def get_availability(self):
         return self.availability
+
+    def add_hours(self, hours):
+        self.hours_worked += hours
+
+    def reset_hours(self):
+        self.hours_worked = 0
+
+    def calculate_weekly_pay(self):
+        return self.hours_worked * self.pay_rate
     
     def __str__(self):
         return f"Caregiver: {self.name}, Phone: {self.phone}, Email: {self.email}, Pay Rate: ${self.pay_rate}/hr"
