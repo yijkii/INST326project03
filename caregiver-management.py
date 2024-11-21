@@ -58,7 +58,7 @@ class CaregiverManager:
 
 if __name__ == "__main__":
     manager = CaregiverManager()
-    caregiver1 = Caregiver("Alice", "123-456-7890", "alice@example.com", 20.0)
+    caregiver1 = Caregiver("Kiki", "123-456-7890", "kiki@example.com", 20.0)
     caregiver2 = Caregiver("Bob", "987-654-3210", "bob@example.com", 18.5)
 
     manager.add_caregiver(caregiver1)
@@ -68,5 +68,5 @@ if __name__ == "__main__":
     manager.display_all_caregivers()
 
     caregiver1.update_availability("Monday", "AM", "preferred")
-    print("\nUpdated Availability for Alice:")
+    print("\nUpdated Availability for Kiki:")
     print(caregiver1.get_availability())
