@@ -44,7 +44,7 @@ class CaregiverManager:
         self.caregivers.append(caregiver)
 
     def remove_caregiver(self, name):
-        self.caregivers = [cg or cg in self.caregivers if cg.name != name]
+        self.caregivers = [cg for cg in self.caregivers if cg.name != name]
 
     def find_caregiver(self, name):
         for caregiver in self.caregivers:
